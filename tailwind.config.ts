@@ -8,10 +8,13 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        "brand-red": "#B7263E",
+        "brand-light": "#F9F4F5",
+      },
+      fontFamily: {
+        georgia: ["Georgia", "Times New Roman", "Times", "serif"],
+        work_sans: ["Work_Sans", "Sans"],
       },
     },
   },

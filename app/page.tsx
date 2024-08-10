@@ -1,113 +1,219 @@
 import Image from "next/image";
 
+const practiceAreas = [
+  {
+    icon: "/car.svg",
+    name: "Auto Collision Claims",
+    description:
+      "Expert representation for victims of car accidents, ensuring fair compensation for injuries, property damage, and lost wages. We navigate complex insurance claims and litigation to protect your rights.",
+  },
+  {
+    icon: "/bike.png",
+    name: "Bicycle Accident Advocacy",
+    description:
+      "Specialized legal support for cyclists injured in road accidents. We understand the unique challenges faced by bicycle accident victims and fight for comprehensive compensation and improved road safety.",
+  },
+  {
+    icon: "/motorcycle.png",
+    name: "Motorcycle Injury Litigation",
+    description:
+      "Dedicated legal assistance for motorcyclists involved in accidents. We combat bias against riders and work tirelessly to secure full compensation for injuries, bike damage, and long-term care needs.",
+  },
+  {
+    icon: "/pedestrian.svg",
+    name: "Pedestrian Accident Protection",
+    description:
+      "Vigorous representation for pedestrians injured by vehicles. We hold negligent drivers accountable and advocate for safer streets while ensuring our clients receive maximum compensation for their injuries.",
+  },
+  {
+    icon: "/truck.svg",
+    name: "Commercial Truck Collision Cases",
+    description:
+      "Skilled handling of complex truck accident claims. We take on large trucking companies and their insurers to secure justice for victims of these often catastrophic crashes.",
+  },
+  {
+    icon: "/tomb.svg",
+    name: "Wrongful Death Representation",
+    description:
+      "Compassionate and determined advocacy for families who have lost loved ones due to others' negligence. We pursue maximum compensation while helping families find closure and justice.",
+  },
+];
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className="">
+      <Hero />
+      <AboutUs />
+      <AreaOfPractice />
+      <Testimonial />
+      <Footer />
+    </div>
+  );
+}
+
+function Hero() {
+  return (
+    <div>
+      <div className="h-[780px] overflow-hidden relative">
+        <Image
+          src="/hero-image.png"
+          fill
+          objectFit="cover"
+          alt="Image of Dr Pamoyo"
+        />
+        <div className="absolute">
+          <h1 className="max-w-lg text-6xl text-white font-georgia">
+            The #1 Personal Injury Lawyer
+          </h1>
+          <p className="max-w-lg text-2xl text-white">
+            With a 90% win rate, our clients can rest easier knowing that their
+            case is positioned to secure the best possible outcome.
+          </p>
         </div>
       </div>
+    </div>
+  );
+}
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
+function AboutUs() {
+  return (
+    <div>
+      <div>
+        <h2 className="font-georgia text-[42px] text-white">
+          Request a Consultation
+        </h2>
+        <p>
+          Get a free quote 30 - 60 minute consultation, please complete the
+          online form below.
+        </p>
+        <form>
+          <input placeholder="Full Name" />
+          <input placeholder="Phone Number" />
+          <input placeholder="Email Address" />
+          <input placeholder="Tell us about your case" />
+          <button>Request a Consultation</button>
+        </form>
+      </div>
+      <div>
+        <h2 className="uppercase">about us</h2>
+        <h3 className="font-georgia text-[42px] text-brand-red">
+          Highly Qualified & Experienced in Personal Injury Law
+        </h3>
+        <p>
+          We have expertise in many aspects of personal injury law. We fight to
+          ensure our clients and their families receive the compensation, care
+          and support they deserve. We proudly act as your advocate and trusted
+          advisor through the complex legal, medical and insurance issues
+          related to your recovery.
+        </p>
         <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+          src="/signature.png"
+          width="196"
+          height="28"
+          alt="signature of Dr. Pamoyo"
         />
+        <span>Founder & Senior Lawyer</span>
       </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+    </div>
+  );
+}
+function AreaOfPractice() {
+  return (
+    <div>
+      <div>
+        <h2 className="uppercase">practice area</h2>
+        <h3 className="font-georgia text-[42px] text-brand-red">
+          A range of Practice Areas
+        </h3>
+        <div>
+          {practiceAreas.map((area, index) => (
+            <ExampleArea
+              key={index}
+              icon={area.icon}
+              name={area.name}
+              description={area.description}
+            />
+          ))}
+        </div>
       </div>
-    </main>
+    </div>
+  );
+}
+
+type area = {
+  icon: string;
+  name: string;
+  description: string;
+};
+
+function ExampleArea(props: area) {
+  return (
+    <div>
+      <span>
+        <Image
+          src={props.icon}
+          width={80}
+          height={80}
+          alt="icon for"
+          aria-disabled
+        />
+      </span>
+      <h3 className="text-xl font-bold font-georgia">{props.name}</h3>
+      <p className="max-w-80">{props.description}</p>
+    </div>
+  );
+}
+
+function Testimonial() {
+  return (
+    <div>
+      <div>
+        <div>
+          <h2 className="uppercase">testimonials</h2>
+          <h3 className="font-georgia text-[42px] text-brand-red">
+            Hear what our past clients say
+          </h3>
+          <p>
+            We strive to provide all of our clients with the best possible
+            results and value how each feels about us and the services we have
+            provided. We are honored by the reviews we have received from both
+            past and present clients
+          </p>
+          <button>Request a Consultation</button>
+        </div>
+        <div>
+          <p>
+            Working with Dr. Moyo was an exceptional experience during a
+            challenging time. His deep legal expertise, coupled with a
+            compassionate approach, made navigating my case much easier. Dr.
+            Moyo was always available to answer my questions, ensuring I fully
+            understood each step. I highly recommend Dr. Moyo to anyone seeking
+            a lawyer who combines legal excellence with a personal touch.
+          </p>
+          <div>
+            <div>
+              <Image
+                className="rounded-full"
+                src="/miss-kaombe.jpg"
+                height={80}
+                width={80}
+                alt="image of Miss Kaombe"
+              />
+            </div>
+            <div>
+              <span className="font-bold">Miss Kaombe</span>
+              <span>Psychologist</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+function Footer() {
+  return (
+    <div>
+      <div className="bg-[url('/footer-image.png')] bg-cover bg-center min-h-[700px]"></div>
+    </div>
   );
 }
