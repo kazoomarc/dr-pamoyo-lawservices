@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+let hi = "";
 const practiceAreas = [
   {
     icon: "/car.svg",
