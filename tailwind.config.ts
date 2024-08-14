@@ -14,7 +14,7 @@ const config: Config = {
       },
       fontFamily: {
         georgia: ["Georgia", "Times New Roman", "Times", "serif"],
-        work_sans: ["Work_Sans", "Sans"],
+        work_sans: ["Work Sans", "Work_Sans", "Sans"],
       },
     },
   },
